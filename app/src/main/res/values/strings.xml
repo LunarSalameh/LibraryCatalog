@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Library Catalog</string>
+    <string name="wallpaper">wallpaper</string>
+    <string name="online_library">ONLINE LIBRARY</string>
+    <string name="search_library">Search Library</string>
+    <string name="in_your_smartphone">In Your SmartPhone !</string>
+    <string name="Description">Now You can study and read your favourite book from your phone ! reach out to a large Selection of Books</string>
+    <string name="MainPage">MainPage</string>
+    <string name="scientific_book">Scientific Book</string>
+    <string name="Educational_book">Eductional Books</string>
+    <string name="Poetry_book">Poetry Books</string>
+    <string name="Children_book">Children Books</string>
+    <string name="Novels_book">Novels Books</string>
+    <string name="Audio_books">Audio Books</string>
+    <string name="Comic_books">Comic Books</string>
+    <string name="titlebook">TitleBook</string>
+    <string name="MoreDetails">"More Details "</string>
+    <string name="DescriptionBook">Description</string>
+    <string name="titlebook1">titleBook1</string>
+</resources>

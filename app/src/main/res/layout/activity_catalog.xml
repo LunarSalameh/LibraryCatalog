@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CatalogActivity"
+    tools:orientation="vertical">
+
+    <Button
+        android:id="@+id/Educational_Category"
+        android:layout_width="355dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#C4CBED"
+        android:fontFamily="@font/calistoga"
+        android:text="@string/Educational_book"
+        android:textAlignment="center"
+        app:icon="@drawable/_201570"
+        app:iconPadding="0dp"
+        app:iconSize="90dp"
+        app:iconTint="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@+id/Poetry_Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Poetry_Category"
+        android:layout_width="355dp"
+        android:layout_height="122dp"
+        android:backgroundTint="#C4CBED"
+        android:text="@string/Poetry_book"
+        app:icon="@drawable/poem_poetry_icon"
+        app:iconSize="90dp"
+        app:iconTint="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@+id/Children_Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Educational_Category" />
+
+    <Button
+        android:id="@+id/Novels_Category"
+        android:layout_width="355dp"
+        android:layout_height="122dp"
+        android:backgroundTint="#C4CBED"
+        android:text="@string/Novels_book"
+        app:icon="@drawable/baseline_library_books_24"
+        app:iconPadding="0dp"
+        app:iconSize="90dp"
+        app:iconTint="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@+id/Comic_Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Children_Category" />
+
+    <Button
+        android:id="@+id/Comic_Category"
+        android:layout_width="355dp"
+        android:layout_height="122dp"
+        android:backgroundTint="#C4CBED"
+        android:text="@string/Comic_books"
+        app:icon="@drawable/comic"
+        app:iconPadding="0dp"
+        app:iconSize="90dp"
+        app:iconTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Novels_Category" />
+
+    <Button
+        android:id="@+id/Children_Category"
+        android:layout_width="355dp"
+        android:layout_height="122dp"
+        android:backgroundTint="#C4CBED"
+        android:text="@string/Children_book"
+        app:icon="@drawable/children"
+        app:iconPadding="0dp"
+        app:iconSize="90dp"
+        app:iconTint="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@+id/Novels_Category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Poetry_Category" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="20sp"
+    android:layout_marginLeft="10sp"
+    android:layout_marginEnd="10sp"
+    tools:context=".ChildrenActivity">
+
+
+        <!--Image view for displaying our book image-->
+        <ImageView
+            android:id="@+id/bookImage1"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_margin="18dp" />
+
+
+            <!--Text view for displaying book publisher-->
+            <TextView
+                android:id="@+id/BookTitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="@string/Children_book"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!--text view for displaying Description of the book-->
+            <TextView
+
+                android:id="@+id/DescriptionBook1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="skljkjnmkj"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C4CBED"
+                android:fontFamily="@font/calistoga"
+                android:text="@string/MoreDetails"
+                android:textAlignment="center" />
+
+        <!--Image view for displaying our book image-->
+        <ImageView
+            android:id="@+id/bookImage2"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_margin="18dp" />
+
+
+
+            <!--Text view for displaying book publisher-->
+            <TextView
+                android:id="@+id/BookTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="@string/titlebook"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!--text view for displaying Description of the book-->
+            <TextView
+
+                android:id="@+id/DescriptionBook2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="@string/DescriptionBook"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C4CBED"
+                android:fontFamily="@font/calistoga"
+                android:text="@string/MoreDetails"
+                android:textAlignment="center" />
+
+        <!--Image view for displaying our book image-->
+
+
+
+</LinearLayout>
