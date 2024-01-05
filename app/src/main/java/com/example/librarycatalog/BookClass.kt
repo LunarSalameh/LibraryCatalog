@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import android.database.sqlite.SQLiteQueryBuilder
 import android.net.Uri
 import android.text.TextUtils
+import com.example.librarycatalog.BookClass.Companion.Book
 
 
 class BookClass : ContentProvider() {
@@ -24,7 +25,7 @@ class BookClass : ContentProvider() {
         const val Book_Description = "Description"
         const val Book_Publish_Date = "Date"
         const val Book_Author = "Author"
-        const val Link = "URL"
+        const val Image_Link = "Image Link"
 
         private val LIBRARY_PROJECTION_MAP: HashMap<String, String>? = null// for database
 
@@ -46,18 +47,73 @@ class BookClass : ContentProvider() {
         const val Children_Books_Table_NAME = "Children_Books"
 
         const val Children_Book_Table = (
-                "CREATE TABLE $Children_Books_Table_NAME($_ID,$Book_Name,$Book_Description,$Book_Publish_Date,$Book_Author,$Link)"
+                "CREATE TABLE $Children_Books_Table_NAME($_ID,$Book_Name,$Book_Description,$Book_Publish_Date,$Book_Author,$Image_Link)"
                 )
 
         private class DatabaseHelper internal constructor(context: Context?) :
             SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
             override fun onCreate(dp: SQLiteDatabase) {
+                db = dp
+                //dp.execSQL("DROP TABLE IF EXISTS $Children_Books_Table_NAME")
+                val query = "SELECT DISTINCT tbl_name FROM sqlite_master WHERE tbl_name = '$Children_Books_Table_NAME'"
+                val cursor = db.rawQuery(query, null)
+                if (cursor != null && cursor.count > 0) {
+                    cursor.close()
+                    return
+                }
+                cursor.close()
                 dp.execSQL(Children_Book_Table)
+                // initializing data
+                val bookData = arrayOf(
+                    ContentValues().apply {
+                        put(_ID,"1")
+                        put(Book_Name, "The Very Hungry Caterpillar")
+                        put(Book_Description, "A classic children's book about a caterpillar's journey of transformation.")
+                        put(Book_Publish_Date, "June 3, 1969")
+                        put(Book_Author, "Eric Carle")
+                        put(Image_Link, "@drawable/the_very_hungry_caterpillar.jpg")
+                    },
+                    ContentValues().apply {
+                        put(_ID,"2")
+                        put(Book_Name, "Goodnight Moon")
+                        put(Book_Description, "A soothing bedtime story with beautiful illustrations.")
+                        put(Book_Publish_Date, "September 3, 1947")
+                        put(Book_Author, "Margaret Wise Brown")
+                        put(Image_Link, "@drawable/goodnight_moon.jpg")
+                    },
+                    ContentValues().apply {
+                        put(_ID,"3")
+                        put(Book_Name, "Where the Wild Things Are")
+                        put(Book_Description, "A story about a young boy named Max who travels to a land of wild creatures.")
+                        put(Book_Publish_Date, "April 19, 1963")
+                        put(Book_Author, "Maurice Sendak")
+                        put(Image_Link, "@drawable/where_the_wild_things_are.jpg")
+                    },
+                    ContentValues().apply {
+                        put(_ID,"4")
+                        put(Book_Name, "The Giving Tree")
+                        put(Book_Description, "A heartwarming tale of a tree's selfless love for a boy.")
+                        put(Book_Publish_Date, "October 7, 1964")
+                        put(Book_Author, "Shel Silverstein")
+                        put(Image_Link, "@drawable/the_giving_tree.jpg")
+                    },
+                    ContentValues().apply {
+                        put(_ID,"5")
+                        put(Book_Name, "Oh, the Places You'll Go!")
+                        put(Book_Description, "Dr. Seuss's uplifting book about the journey of life.")
+                        put(Book_Publish_Date, "January 22, 1990")
+                        put(Book_Author, "Dr. Seuss")
+                        put(Image_Link, "@drawable/oh_the_places_you_ll_go_.jpg")
+                    }
+                )
+                for (book in bookData) {
+                    db.insert(Children_Books_Table_NAME, null, book)
+                }
             }
 
             override fun onUpgrade(dp: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-                dp.execSQL("DROP TABLE IF EXISTS $Children_Books_Table_NAME ")
+                dp.execSQL("DROP TABLE IF EXISTS $Children_Books_Table_NAME")
                 onCreate(dp)
             }
         }
@@ -84,6 +140,7 @@ class BookClass : ContentProvider() {
         val context = context
         val dbHelper = DatabaseHelper(context)
         db = dbHelper.writableDatabase
+        dbHelper.onCreate(db)
         return true
     }
 
@@ -161,7 +218,58 @@ class BookClass : ContentProvider() {
 
         }
         context!!.contentResolver.notifyChange(uri, null)
+
+        refreshData()
+
         return count
+    }
+
+    private fun refreshData() {
+        // Re-query the database to retrieve the updated data
+        val projection = arrayOf(
+            BookClass._ID,
+            BookClass.Book_Name,
+            BookClass.Book_Description,
+            BookClass.Book_Publish_Date,
+            BookClass.Book_Author,
+            BookClass.Image_Link
+        )
+
+        val cursor = context?.contentResolver?.query(
+            BookClass.CONTENT_URI,
+            projection,
+            null,
+            null,
+            null
+        )
+
+        // Update your app's data structures or UI components with the new data
+        if (cursor != null) {
+            // Clear the existing data structures or UI components and repopulate them with the new data
+            // For example, if you have a list of books, you can clear the list and add the updated books from the cursor
+
+            // Clear existing data structures or UI components
+
+            // Repopulate with new data
+            val updatedBooks = mutableListOf<Book>()
+
+            while (cursor.moveToNext()) {
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow(BookClass._ID))
+                val name = cursor.getString(cursor.getColumnIndexOrThrow(BookClass.Book_Name))
+                val description = cursor.getString(cursor.getColumnIndexOrThrow(BookClass.Book_Description))
+                val publishDate = cursor.getString(cursor.getColumnIndexOrThrow(BookClass.Book_Publish_Date))
+                val author = cursor.getString(cursor.getColumnIndexOrThrow(BookClass.Book_Author))
+                val imageLink = cursor.getString(cursor.getColumnIndexOrThrow(BookClass.Image_Link))
+
+                val book = Book(id, name, description, publishDate, author, imageLink)
+                updatedBooks.add(book)
+            }
+
+            // Update your app's data structures or UI components with the updatedBooks list
+
+            // Close the cursor
+            cursor.close()
+        }
     }
 
 }

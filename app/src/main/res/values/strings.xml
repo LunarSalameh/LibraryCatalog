@@ -17,4 +17,16 @@
     <string name="MoreDetails">"More Details "</string>
     <string name="DescriptionBook">Description</string>
     <string name="titlebook1">titleBook1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TheVeryHungryCaterpillar">The Very Hungry Caterpillar</string>
+    <string name="DescriptionBook1">A classic children\'s book about a caterpillar\'s journey of transformation.</string>
+    <string name="tGoodnightMoon">Goodnight Moon</string>
+    <string name="DescriptionBook2">A soothing bedtime story with beautiful illustrations.</string>
+    <string name="WheretheWildThingsAre">Where the Wild Things Are</string>
+    <string name="DescriptionBook3">A story about a young boy named Max who travels to a land of wild creatures.</string>
+    <string name="TheGivingTree">The Giving Tree</string>
+    <string name="DescriptionBook4">A heartwarming tale of a tree\'s selfless love for a boy.</string>
+    <string name="McGrawHillEducation">McGraw-Hill Education</string>
+    <string name="Description1">Calculus is a branch of mathematics that deals with the study of change and motion.</string>
 </resources>

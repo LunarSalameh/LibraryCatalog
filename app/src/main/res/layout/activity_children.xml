@@ -10,14 +10,24 @@
     android:layout_marginEnd="10sp"
     tools:context=".ChildrenActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <!--Image view for displaying our book image-->
         <ImageView
             android:id="@+id/bookImage1"
             android:layout_width="130dp"
             android:layout_height="160dp"
-            android:layout_margin="18dp" />
+            android:layout_margin="18dp"
+            app:srcCompat="@drawable/the_very_hungry_caterpillar" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:orientation="vertical">
 
             <!--Text view for displaying book publisher-->
             <TextView
@@ -25,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="@string/Children_book"
+                android:text="@string/TheVeryHungryCaterpillar"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
@@ -37,11 +47,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:padding="4dp"
-                android:text="skljkjnmkj"
+                android:text="@string/DescriptionBook1"
                 android:textColor="@color/black"
                 android:textSize="10sp" />
 
             <Button
+                android:id="@+id/Button1"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,14 +61,28 @@
                 android:text="@string/MoreDetails"
                 android:textAlignment="center" />
 
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <!--Image view for displaying our book image-->
         <ImageView
             android:id="@+id/bookImage2"
             android:layout_width="130dp"
             android:layout_height="160dp"
-            android:layout_margin="18dp" />
+            android:layout_margin="18dp"
+            app:srcCompat="@drawable/goodnight_moon"/>
 
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:orientation="vertical">
 
             <!--Text view for displaying book publisher-->
             <TextView
@@ -65,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="@string/titlebook"
+                android:text="@string/tGoodnightMoon"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
@@ -77,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:padding="4dp"
-                android:text="@string/DescriptionBook"
+                android:text="@string/DescriptionBook2"
                 android:textColor="@color/black"
                 android:textSize="10sp" />
 
@@ -90,8 +115,115 @@
                 android:text="@string/MoreDetails"
                 android:textAlignment="center" />
 
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <!--Image view for displaying our book image-->
+        <ImageView
+            android:id="@+id/bookImage3"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_margin="18dp"
+            app:srcCompat="@drawable/where_the_wild_things_are"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:orientation="vertical">
 
+            <!--Text view for displaying book publisher-->
+            <TextView
+                android:id="@+id/BookTitle3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="@string/WheretheWildThingsAre"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!--text view for displaying Description of the book-->
+            <TextView
+
+                android:id="@+id/DescriptionBook3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="@string/DescriptionBook3"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C4CBED"
+                android:fontFamily="@font/calistoga"
+                android:text="@string/MoreDetails"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Image view for displaying our book image-->
+        <ImageView
+            android:id="@+id/bookImage4"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_margin="18dp"
+            app:srcCompat="@drawable/the_giving_tree" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:orientation="vertical">
+
+            <!--Text view for displaying book publisher-->
+            <TextView
+                android:id="@+id/BookTitle4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="@string/TheGivingTree"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!--text view for displaying Description of the book-->
+            <TextView
+                android:id="@+id/DescriptionBook4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="@string/DescriptionBook4"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#C4CBED"
+                android:fontFamily="@font/calistoga"
+                android:text="@string/MoreDetails"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

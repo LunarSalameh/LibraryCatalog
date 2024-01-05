@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LibraryCatalog"
         tools:targetApi="31">
+        <provider
+            android:name=".BookClass"
+            android:authorities="com.example.LibraryCatalog.BookClass"
+            android:enabled="true"
+            android:exported="true"/>
 
         <activity
             android:name=".ComicActivity"
@@ -41,14 +46,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider
-            android:authorities="com.example.librarycatalog.BookClass"
-            android:name=".BookClass" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>

@@ -1,9 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="20sp"
+    android:layout_marginLeft="10sp"
+    android:layout_marginEnd="10sp"
     tools:context=".ComicActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Image view for displaying our book image-->
+        <ImageView
+            android:id="@+id/bookImage1"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_margin="18dp"
+            app:srcCompat="@drawable/watchmen" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:orientation="vertical">
+
+            <!--Text view for displaying book publisher-->
+            <TextView
+                android:id="@+id/BookTitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text=" DC Comics "
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!--text view for displaying Description of the book-->
+            <TextView
+
+                android:id="@+id/DescriptionBook1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="is a groundbreaking graphic novel that deconstructs the superhero genre, delving into complex themes of power, morality, and the flawed nature of humanity..
+
+"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/Button1"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C4CBED"
+                android:fontFamily="@font/calistoga"
+                android:text="@string/MoreDetails"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Image view for displaying our book image-->
+        <ImageView
+            android:id="@+id/bookImage2"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_margin="18dp"
+            app:srcCompat="@drawable/maus"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:orientation="vertical">
+
+            <!--Text view for displaying book publisher-->
+            <TextView
+                android:id="@+id/BookTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Maus book"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!--text view for displaying Description of the book-->
+            <TextView
+
+                android:id="@+id/DescriptionBook2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="Holocaust depicted through mice and cats in a Pulitzer-winning graphic novel.
+
+
+"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C4CBED"
+                android:fontFamily="@font/calistoga"
+                android:text="@string/MoreDetails"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Image view for displaying our book image-->
+        <ImageView
+            android:id="@+id/bookImage3"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_margin="18dp"
+            app:srcCompat="@drawable/sandman"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:orientation="vertical">
+
+            <!--Text view for displaying book publisher-->
+            <TextView
+                android:id="@+id/BookTitle3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Image Comics"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!--text view for displaying Description of the book-->
+            <TextView
+
+                android:id="@+id/DescriptionBook3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text="Star-crossed lovers navigate a fantastical galaxy in an epic space opera comic series.
+
+"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C4CBED"
+                android:fontFamily="@font/calistoga"
+                android:text="@string/MoreDetails"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Image view for displaying our book image-->
+        <ImageView
+            android:id="@+id/bookImage4"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_margin="18dp"
+            app:srcCompat="@drawable/saga" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:orientation="vertical">
+
+            <!--Text view for displaying book publisher-->
+            <TextView
+                android:id="@+id/BookTitle4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text=" DC Comics"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <!--text view for displaying Description of the book-->
+            <TextView
+                android:id="@+id/DescriptionBook4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:text=" Surreal comic series follows the Lord of Dreams through fantasy and mythology.
+
+"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#C4CBED"
+                android:fontFamily="@font/calistoga"
+                android:text="@string/MoreDetails"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
